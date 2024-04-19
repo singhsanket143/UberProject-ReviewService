@@ -28,8 +28,6 @@ public class Driver extends BaseModel{
 
     private String phoneNumber;
 
-    private String address;
-
     // 1 : n , Driver : Booking
     @OneToMany(mappedBy = "driver", fetch = FetchType.LAZY)
     @Fetch(FetchMode.SUBSELECT)
