@@ -14,11 +14,11 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class Driver extends BaseModel{
 
     private String name;
