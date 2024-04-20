@@ -3,6 +3,7 @@ package com.example.uberreviewservice.services;
 import com.example.uberreviewservice.models.Review;
 import com.example.uberreviewservice.repositories.ReviewRepository;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import org.hibernate.FetchNotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -55,6 +56,7 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
+    @Transactional
     public Review publishReview(Review review) {
         return this.reviewRepository.save(review);
     }

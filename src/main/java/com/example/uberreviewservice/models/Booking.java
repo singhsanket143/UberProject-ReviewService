@@ -1,5 +1,6 @@
 package com.example.uberreviewservice.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,10 +14,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Booking extends BaseModel{
-
-
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
-    private Review review; // we have defined a 1:1 relationship between booking and review
 
     @Enumerated(value = EnumType.STRING)
     private BookingStatus bookingStatus;
